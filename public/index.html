@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do List</title>
+    <style type="text/css" media="screen">
+      html, body {
+        background-color: #4B7399;
+        font-family: Verdana, Helvetica, Arial;
+        font-size: 14px;
+      }
+      a { color: #0000FF; }
+
+      #container {
+        width: 75%;
+        margin: 0 auto;
+        background-color: #FFF;
+        padding: 20px 40px;
+        border: solid 1px black;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        function addTask(task) {
+//          $.each(task, function(){console.log(this.jm); $('#tasks').append('<li>' + this.jm.name + '</ul>');});
+            console.log(task); 
+            $('#tasks').append('<li>' + task.name + '</ul>');
+        }
+        function addApp(task) {
+//          $.each(task, function(){console.log(this.jm); $('#tasks').append('<li>' + this.jm.name + '</ul>');});
+            console.log(task); 
+            $('#apps').append('<li>' + task.app_name + '</ul>');
+        }
+        function addSub(task) {
+//          $.each(task, function(){console.log(this.jm); $('#tasks').append('<li>' + this.jm.name + '</ul>');});
+            console.log(task); 
+            $('#subs').append('<li>' + task.sub_name + '</ul>');
+        }        
+        function addAppSub(task) {
+//          $.each(task, function(){console.log(this.jm); $('#tasks').append('<li>' + this.jm.name + '</ul>');});
+            console.log(task); 
+            $('#appsubs').append('<li>' + task.app_name+' is in '+ task.sub_name + '</ul>');
+        }  
+        
+        $('#new_task').submit(function(e) {
+          $.post('/api/v1/tasks', $(this).serialize(), addTask);
+          this.reset();
+          e.preventDefault();
+        });
+
+           
+        $('#new_app').submit(function(e) {
+          $.post('/api/v1/apps', $(this).serialize(), addApp);
+          this.reset();
+          e.preventDefault();
+        });
+        
+        $('#new_sub').submit(function(e) {
+          $.post('/api/v1/subs', $(this).serialize(), addSub);
+          this.reset();
+          e.preventDefault();
+        });
+        
+        $('#new_appsub').submit(function(e) {
+          $.post('/api/v1/appsubs', $(this).serialize(), addAppSub);
+          this.reset();
+          e.preventDefault();
+        });
+        
+  /*      $.getJSON('api/v1/tasks', function(tasks) {
+          console.log(tasks);
+		  $.each(tasks, function() {addTask(this); });
+        });
+  */
+        $.getJSON('api/v1/apps', function(tasks) {
+          console.log(tasks);
+		  $.each(tasks, function() {addApp(this); });
+        });
+
+        $.getJSON('api/v1/subs', function(tasks) {
+          console.log(tasks);
+		  $.each(tasks, function() {addSub(this); });
+        });
+        
+        $.getJSON('api/v1/appsubs', function(tasks) {
+          console.log(tasks);
+		  $.each(tasks, function() {addAppSub(this); });
+        });
+        
+      });
+    </script>
+  <body>
+    <div id="container">
+      <h1>To-Do List</h1>
+      <form id="new_task">
+        <input type="text" name="task[name]" id="task_name">
+        <input type="text" name="task[deadline]" id="task_deadline">
+        <input type="submit" value="Add">
+      </form>
+      </br>
+      <form id="new_app">
+        name:<input type="text" name="app[name]" id="app_name">
+        app_name:<input type="text" name="app[app_name]" id="app_app_name">
+        path:<input type="text" name="app[path]" id="app_path">
+        category:<input type="text" name="app[category]" id="app_category">
+        price:<input type="text" name="app[price]" id="app_price">
+        <input type="submit" value="Add App">
+      </form>
+      </br>
+      <form id="new_sub">
+        sub_name:<input type="text" name="sub[sub_name]" id="sub_sub_name">
+        description:<input type="text" name="sub[description]" id="sub_description">
+        score:<input type="text" name="sub[score]" id="sub_score">
+        icon_path:<input type="text" name="sub[icon_path]" id="sub_icon_path">
+        <input type="submit" value="Add Sub">
+      </form>
+      </br>
+      <form id="new_appsub">
+        sub_name:<input type="text" name="appsub[sub_name]" id="appsub_sub_name">
+        app_name:<input type="text" name="appsub[app_name]" id="appsub_app_name">
+        description:<input type="text" name="appsub[description]" id="appsub_description">
+        hot_score:<input type="text" name="appsub[hot_score]" id="appsub_hot_score">
+        uid:<input type="text" name="appsub[uid]" id="appsub_uid">
+        sub_id:<input type="text" name="appsub[sub_id]" id="appsub_sub_id">
+        app_id:<input type="text" name="appsub[app_id]" id="appsub_app_id">        
+        <input type="submit" value="Add AppSub">
+      </form>
+
+      <ul id="tasks"></ul>
+      Apps:<ul id="apps"></ul>
+      Subs:<ul id="subs"></ul>
+      AppSubs:<ul id="appsubs"></ul>      
+    </div>
+  </body>
+</html>

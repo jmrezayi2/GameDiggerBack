@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sub_name: MyString
+  description: MyString
+  score: MyString
+  integer: MyString
+  icon_path: MyString
+
+two:
+  sub_name: MyString
+  description: MyString
+  score: MyString
+  integer: MyString
+  icon_path: MyString

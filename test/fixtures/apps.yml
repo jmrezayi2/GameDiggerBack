@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  app_name: MyString
+  path: MyString
+  name: MyString
+  category: MyString
+  price: MyString
+
+two:
+  app_name: MyString
+  path: MyString
+  name: MyString
+  category: MyString
+  price: MyString

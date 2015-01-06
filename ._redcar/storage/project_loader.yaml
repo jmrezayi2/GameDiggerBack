@@ -1,0 +1,6 @@
+--- 
+open_files: 
+  - app/models/app.rb
+  - app/models/app_sub.rb
+  - app/models/sub.rb
+  - db/migrate/20150106021253_create_apps.rb

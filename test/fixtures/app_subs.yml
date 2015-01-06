@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  app_name: MyString
+  sub_name: MyString
+  description: MyString
+  score: MyString
+  integer: MyString
+  comment_count: MyString
+  hot_score: MyString
+  uid: MyString
+  flag: 1
+
+two:
+  app_name: MyString
+  sub_name: MyString
+  description: MyString
+  score: MyString
+  integer: MyString
+  comment_count: MyString
+  hot_score: MyString
+  uid: MyString
+  flag: 1
