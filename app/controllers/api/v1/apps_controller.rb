@@ -1,15 +1,45 @@
+
+
 		require 'httparty'
+
 module Api
 	module V1
     class AppsController < ApplicationController
 
-      # GET /tasks
-		  # GET /tasks.json
+      #GET /tasks
+		  #GET /tasks.json
 		  def index
   			@apps = App.all
-	  		response = HTTParty.get('http://play.google.com/store/apps/details?id=com.tflolo.droidremote.ui');
-        render html: response
-        #render json: @apps
+        
+        
+        icongraber_1_start1='<img alt="Cover art" class="cover-image" src="';
+        icongraber_1_start2='http';
+        icongraber_1_end='"/>';
+
+        icongraber_2_start1='<a class="document-subtitle category" href="/store/apps/category/';
+        icongraber_2_start2='category/';
+        icongraber_2_end='">';
+
+
+        icongraber_3_start1='<div class="document-title">';
+        icongraber_3_start2='<p>';
+        icongraber_3_end='</p>?';
+        
+        response = HTTParty.get('http://play.google.com/store/apps/details?id=com.lima.doodlejump');
+        
+        
+        num=response.search(icongraber_1_start1);
+	      str3=response.substr(num,response.length);
+    	  num=str3.search(icongraber_1_start2);
+	      str3=str3.substr(num,str3.length);
+	      num2=str3.search(icongraber_1_end);
+	      str3=str3.substr(0,num2);
+  	    msg=str3;
+        
+        
+        render html: msg
+        
+#        render json: @apps
 		  end
 
 		  # GET /tasks/1
