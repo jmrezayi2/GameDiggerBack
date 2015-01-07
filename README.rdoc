@@ -4,11 +4,11 @@ This will make the back end of the GameDigger app.
 
 What is done:
 
-*App model containing: app_name, path, name, category, price
+* App model containing: app_name, path, name, category, price
 
-*Sub model containing: sub_name, description, score , icon_path
+* Sub model containing: sub_name, description, score , icon_path
 
-*AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
+* AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
 
 * look at index.html, where you can add new app, new sub or suggest new app to a sub (appsub)
 What must be done:
