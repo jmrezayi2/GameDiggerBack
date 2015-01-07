@@ -3,15 +3,16 @@ This will make the back end of the GameDigger app.
 
 
 What is done:
-App model containing: app_name, path, name, category, price
 
-Sub model containing: sub_name, description, score , icon_path
+*App model containing: app_name, path, name, category, price
 
-AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
+*Sub model containing: sub_name, description, score , icon_path
+
+*AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
 
 * look at index.html, where you can add new app, new sub or suggest new app to a sub (appsub)
 What must be done:
+
 1- When suggesting new app to a sub, creat the app in App model if not already there.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Please feel free to contribute.
