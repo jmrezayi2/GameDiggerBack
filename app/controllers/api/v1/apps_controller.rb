@@ -1,11 +1,15 @@
+		require 'httparty'
 module Api
 	module V1
-		class AppsController < ApplicationController
+    class AppsController < ApplicationController
+
       # GET /tasks
 		  # GET /tasks.json
 		  def index
   			@apps = App.all
-	  		render json: @apps
+	  		response = HTTParty.get('http://play.google.com/store/apps/details?id=com.tflolo.droidremote.ui');
+        render html: response
+        #render json: @apps
 		  end
 
 		  # GET /tasks/1

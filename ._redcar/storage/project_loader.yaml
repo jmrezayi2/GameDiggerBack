@@ -1,6 +1,5 @@
 --- 
 open_files: 
-  - app/models/app.rb
-  - app/models/app_sub.rb
-  - app/models/sub.rb
+  - public/index.html
+  - README.rdoc
   - db/migrate/20150106021253_create_apps.rb

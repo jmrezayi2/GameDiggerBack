@@ -15,12 +15,6 @@ cursor_positions:
   - :path: app/models/app.rb
     :cursor_offset: 75
     :timestamp: 2015-01-05 21:45:40.037000 -05:00
-  - :path: db/migrate/20150106021253_create_apps.rb
-    :cursor_offset: 21
-    :timestamp: 2015-01-05 21:12:53.522000 -05:00
-  - :path: public/index.html
-    :cursor_offset: 846
-    :timestamp: 2015-01-06 16:35:09.944000 -05:00
   - :path: app/views/api/v1/tasks/index.json.jbuilder
     :cursor_offset: 0
     :timestamp: 2014-12-28 22:20:12.775000 -05:00
@@ -73,4 +67,18 @@ cursor_positions:
     :timestamp: 2015-01-06 18:57:12.557000 -05:00
     :selection_offset: 1549
     :block_selection_mode: false
+  - :path: public/index.html
+    :cursor_offset: 1681
+    :timestamp: 2015-01-06 18:57:54.672000 -05:00
+  - :path: README.rdoc
+    :cursor_offset: 487
+    :timestamp: 2015-01-06 19:27:06.132000 -05:00
+  - :path: db/migrate/20150106021253_create_apps.rb
+    :cursor_offset: 86
+    :timestamp: 2015-01-05 21:12:53.522000 -05:00
+    :selection_offset: 199
+    :block_selection_mode: false
+  - :path: Gemfile
+    :cursor_offset: 244
+    :timestamp: 2015-01-07 17:30:26.840000 -05:00
 files_to_retain: 0

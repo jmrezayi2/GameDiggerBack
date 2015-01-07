@@ -42,6 +42,9 @@ GEM
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
@@ -55,9 +58,10 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.5-x86-mingw32)
       mini_portile (~> 0.6.0)
-    pg (0.17.1-x86-mingw32)
+    pg (0.18.1-x86-mingw32)
     rack (1.6.0)
     rack-cors (0.3.1)
     rack-test (0.6.2)
@@ -113,6 +117,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  httparty
   jbuilder
   pg
   rack-cors
