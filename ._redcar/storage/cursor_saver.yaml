@@ -60,4 +60,7 @@ cursor_positions:
     :timestamp: 2015-01-05 21:33:14.980000 -05:00
     :selection_offset: 362
     :block_selection_mode: false
+  - :path: license
+    :cursor_offset: 36
+    :timestamp: 2015-01-06 19:15:20.938000 -05:00
 files_to_retain: 0
