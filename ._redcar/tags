@@ -1,4 +1,4 @@
-1420590181
+1420590426
 AddFilednameToTasks	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/20141229012738_add_filedname_to_tasks.rb	class AddFilednameToTasks 
 Api	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/tasks_controller.rb	module Api
 Api	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/apps_controller.rb	module Api

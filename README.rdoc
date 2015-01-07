@@ -6,9 +6,15 @@ What is done:
 
 * App model containing: app_name, path, name, category, price
 
+http://localhost:3000/api/v1/apps gives all the apps
+
 * Sub model containing: sub_name, description, score , icon_path
 
+http://localhost:3000/api/v1/subs gives all the subs
+
 * AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
+
+http://localhost:3000/api/v1/appsubs gives all the apps suggested to subs
 
 * look at index.html, where you can add new app, new sub or suggest new app to a sub (appsub)
 What must be done:
