@@ -13,6 +13,6 @@ What is done:
 * look at index.html, where you can add new app, new sub or suggest new app to a sub (appsub)
 What must be done:
 
-1- When suggesting new app to a sub, creat the app in App model if not already there.
+1- When suggesting new app to a sub, create the app in App model if not already there.
 
 Please feel free to contribute.
