@@ -1,28 +1,17 @@
 == README
+This will make the back end of the GameDigger app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+What is done:
+App model containing: app_name, path, name, category, price
 
-* Ruby version
+Sub model containing: sub_name, description, score , icon_path
 
-* System dependencies
+AppSub model containing: app_name, sub_name, description, score, hot_score, uid, app_id, sub_id
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+* look at index.html, where you can add new app, new sub or suggest new app to a sub (appsub)
+What must be done:
+1- When suggesting new app to a sub, creat the app in App model if not already there.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
