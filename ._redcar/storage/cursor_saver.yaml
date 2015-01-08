@@ -52,11 +52,6 @@ cursor_positions:
   - :path: license
     :cursor_offset: 36
     :timestamp: 2015-01-06 19:15:20.938000 -05:00
-  - :path: app/controllers/api/v1/apps_controller.rb
-    :cursor_offset: 1311
-    :timestamp: 2015-01-06 17:09:42.946000 -05:00
-    :selection_offset: 1274
-    :block_selection_mode: false
   - :path: app/controllers/api/v1/subs_controller.rb
     :cursor_offset: 1318
     :timestamp: 2015-01-06 17:36:41.043000 -05:00
@@ -70,15 +65,21 @@ cursor_positions:
   - :path: public/index.html
     :cursor_offset: 1681
     :timestamp: 2015-01-06 18:57:54.672000 -05:00
-  - :path: README.rdoc
-    :cursor_offset: 487
-    :timestamp: 2015-01-06 19:27:06.132000 -05:00
+  - :path: Gemfile
+    :cursor_offset: 244
+    :timestamp: 2015-01-07 17:30:26.840000 -05:00
+  - :path: config/initializers/fix_ssl.rb
+    :cursor_offset: 313
+    :timestamp: 2015-01-07 18:36:41.955000 -05:00
+  - :path: app/controllers/api/v1/apps_controller.rb
+    :cursor_offset: 3366
+    :timestamp: 2015-01-07 19:28:34.805000 -05:00
   - :path: db/migrate/20150106021253_create_apps.rb
     :cursor_offset: 86
     :timestamp: 2015-01-05 21:12:53.522000 -05:00
     :selection_offset: 199
     :block_selection_mode: false
-  - :path: Gemfile
-    :cursor_offset: 244
-    :timestamp: 2015-01-07 17:30:26.840000 -05:00
+  - :path: README.rdoc
+    :cursor_offset: 487
+    :timestamp: 2015-01-06 19:27:06.132000 -05:00
 files_to_retain: 0

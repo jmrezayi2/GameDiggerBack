@@ -1,6 +1,7 @@
-
+require 'uri'
 
 		require 'httparty'
+HTTParty::Basement.default_options.update(verify: false)
 
 module Api
 	module V1
@@ -10,35 +11,79 @@ module Api
 		  #GET /tasks.json
 		  def index
   			@apps = App.all
-        
-        
-        icongraber_1_start1='<img alt="Cover art" class="cover-image" src="';
+    		icongraber_1_start1='<img class="cover-image" src="';
         icongraber_1_start2='http';
-        icongraber_1_end='"/>';
+        icongraber_1_end='"';
 
         icongraber_2_start1='<a class="document-subtitle category" href="/store/apps/category/';
         icongraber_2_start2='category/';
         icongraber_2_end='">';
 
 
-        icongraber_3_start1='<div class="document-title">';
-        icongraber_3_start2='<p>';
-        icongraber_3_end='</p>?';
-        
-        response = HTTParty.get('http://play.google.com/store/apps/details?id=com.lima.doodlejump');
-        
-        
-        num=response.search(icongraber_1_start1);
-	      str3=response.substr(num,response.length);
-    	  num=str3.search(icongraber_1_start2);
-	      str3=str3.substr(num,str3.length);
-	      num2=str3.search(icongraber_1_end);
-	      str3=str3.substr(0,num2);
-  	    msg=str3;
-        
-        
-        render html: msg
-        
+        icongraber_3_start1='<div class="document-title"';
+        icongraber_3_start2='<div>';
+        icongraber_3_end='</div>';                
+        response = HTTParty.get('https://play.google.com/store/apps/details?id=com.limasky.animatch').parsed_response;
+
+# Get the logo path
+		    num=response.index(icongraber_1_start1);
+	      str3=response[num..response.length];
+        num2=str3.index(icongraber_1_start2);
+	      str3=str3[num2..str3.length];
+ 	      num2=str3.index(icongraber_1_end);
+	      logo_path=str3[0,num2];
+
+# Get the category
+
+	      num=response.index(icongraber_2_start1);
+	      str3=response[num,response.length];
+	      num=str3.index(icongraber_2_start2);
+	      str3=str3[num,str3.length];
+      	num2=str3.index(icongraber_2_end);
+	      str3=str3[9,num2-9];
+	      category=str3;
+
+# Get the name
+
+	      num=response.index(icongraber_3_start1);
+	      str3=response[num,response.length];
+	      num=str3.index(icongraber_3_start2);
+	      str3=str3[num,str3.length];
+	      num2=str3.index(icongraber_3_end);
+	      str3=str3[5,num2-5];
+	      name=str3;
+
+# Get the price
+
+	if(response.index("Buy</span>")!=nil)
+		paid=true;
+	else
+		paid=false;
+	end
+  if(response.index("in-app purchases")!=nil)
+		mIAP=true;
+	else
+		mIAP=false;
+	end
+	mFreePaidIAP="unknown";
+	
+	if(!paid&&!mIAP)
+		mFreePaidIAP="free";
+	else 
+    if(paid&&!mIAP)
+		  mFreePaidIAP="paid";
+	  else 
+      if(!paid&&mIAP)
+		    mFreePaidIAP="IAP";
+	    else 
+        if(paid&&mIAP)
+		      mFreePaidIAP="pIAP";
+        end
+      end
+    end
+  end
+  render html: mFreePaidIAP +logo_path +category+ name
+
 #        render json: @apps
 		  end
 

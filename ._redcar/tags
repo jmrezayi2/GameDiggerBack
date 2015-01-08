@@ -1,4 +1,4 @@
-1420674022
+1420677151
 AddFilednameToTasks	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/20141229012738_add_filedname_to_tasks.rb	class AddFilednameToTasks 
 Api	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/tasks_controller.rb	module Api
 Api	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/subs_controller.rb	module Api
@@ -16,8 +16,6 @@ CreateAppSubs	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/2015010602
 CreateApps	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/20150106021253_create_apps.rb	class CreateApps 
 CreateSubs	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/20150106021447_create_subs.rb	class CreateSubs 
 CreateTasks	d:/jamshid/GIT/ruby_projects/gamediggerback2/db/migrate/20141228023950_create_tasks.rb	class CreateTasks 
-HTTP	d:/jamshid/GIT/ruby_projects/gamediggerback2/config/initializers/fix_ssl.rb	  class HTTP
-Net	d:/jamshid/GIT/ruby_projects/gamediggerback2/config/initializers/fix_ssl.rb	module Net
 Sub	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/models/sub.rb	class Sub 
 SubTest	d:/jamshid/GIT/ruby_projects/gamediggerback2/test/models/sub_test.rb	class SubTest 
 SubsController	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/subs_controller.rb			class SubsController 
@@ -49,7 +47,6 @@ index	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/tasks_
 index	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/subs_controller.rb			  def index
 index	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/appsubs_controller.rb			  def index
 index	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/apps_controller.rb			  def index
-original_use_ssl	d:/jamshid/GIT/ruby_projects/gamediggerback2/config/initializers/fix_ssl.rb	    alias_method :original_use_ssl
 show	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/tasks_controller.rb			  def show
 show	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/subs_controller.rb			  def show
 show	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/appsubs_controller.rb			  def show
@@ -61,4 +58,3 @@ update	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/tasks
 update	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/subs_controller.rb			  def update
 update	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/appsubs_controller.rb			  def update
 update	d:/jamshid/GIT/ruby_projects/gamediggerback2/app/controllers/api/v1/apps_controller.rb			  def update
-use_ssl=	d:/jamshid/GIT/ruby_projects/gamediggerback2/config/initializers/fix_ssl.rb	    def use_ssl=(flag)
